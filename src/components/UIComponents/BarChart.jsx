@@ -8,7 +8,9 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 const { faker } = require('@faker-js/faker');
+
 
 ChartJS.register(
   CategoryScale,
@@ -16,11 +18,14 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 export const barOptions = {
   indexAxis: 'y',
+  responsive: true,
+  maintainAspectRatio: false,
   scales:{
     x:{
         grid:{
@@ -61,6 +66,17 @@ export const barOptions = {
       display: false,
       text: 'Chart.js Horizontal Bar Chart',
     },
+    datalabels: {
+      formatter: (val, context) => (`${val}%`),
+      anchor: 'end',
+      align: 'end',
+      labels: {
+        value: {
+          color: 'blue'
+        }
+      }
+
+    }
      },
 };
 
@@ -75,8 +91,10 @@ export const barData = {
       backgroundColor: 'blue',
       borderWidth: 0,
       borderSkipped: false,
-
-      barPercentage: 0.3
+      barPercentage: 0.1,
+      datalabels: {
+        color: '#FFCE56'
+      }
     },
 
   ],

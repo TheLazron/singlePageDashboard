@@ -7,6 +7,7 @@ import TopWidget from "../UIComponents/TopWidget";
 import { Doughnut, Bar } from "react-chartjs-2";
 import {doughnutData, doughnutOptions} from '../UIComponents/DoughnutChart';
 import {barData, barOptions} from '../UIComponents/BarChart';
+import FunnelGraph from "../UIComponents/FunnelGraph";
 function Dashboard(){
 
 
@@ -30,10 +31,11 @@ return (
         </div>
         <hr/>
         <div className="incomeDiv">
-            <h2>Income</h2>
-            <div className="incomeGraph">
+            <h4>Income</h4>
 
-            </div>
+            
+            <FunnelGraph/>
+            
         </div>
         <hr/>
         <div className="bottomPanel">

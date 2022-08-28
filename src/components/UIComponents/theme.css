@@ -1,0 +1,24 @@
+
+
+
+
+.svg-funnel-js .svg-funnel-js__labels .svg-funnel-js__label .label__value {
+    font-size: 24px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    color: rgb(0, 0, 0);
+  }
+
+
+.label__percentage{
+  visibility: hidden
+  }
+
+
+
+
+.label-1:hover, .label-2:hover, .label-4:hover, .label-3:hover{
+  background-color:rgb(93, 154, 251);
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
+}

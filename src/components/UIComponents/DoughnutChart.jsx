@@ -30,6 +30,9 @@ export const doughnutData = {
 
 export const doughnutOptions={
 responsive: true,
+// borderRadius:10,
+borderJoinStyle: 'bevel',
+hoverOffset: 2,
 plugins:{
 legend: {
 
